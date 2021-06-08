@@ -16,7 +16,6 @@
 		7A1E500326669D630078008C /* OnTimeToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500226669D630078008C /* OnTimeToDoTests.swift */; };
 		7A1E500E26669D630078008C /* OnTimeToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */; };
 		7A1E501F2666A2A20078008C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E501E2666A2A20078008C /* SideMenuViewController.swift */; };
-		7A1E50242666A4C40078008C /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E50232666A4C40078008C /* SideMenuModel.swift */; };
 		7A1E502C2666A5470078008C /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E502B2666A5470078008C /* SideMenuCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTimeToDoUITests.swift; sourceTree = "<group>"; };
 		7A1E500F26669D630078008C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1E501E2666A2A20078008C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		7A1E50232666A4C40078008C /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		7A1E502B2666A5470078008C /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +111,6 @@
 				7A1E4FF626669D620078008C /* LaunchScreen.storyboard */,
 				7A1E4FF926669D620078008C /* Info.plist */,
 				7A1E501E2666A2A20078008C /* SideMenuViewController.swift */,
-				7A1E50232666A4C40078008C /* SideMenuModel.swift */,
 				7A1E502B2666A5470078008C /* SideMenuCell.swift */,
 			);
 			path = OnTimeToDo;
@@ -271,7 +268,6 @@
 				7A1E4FF026669D610078008C /* ViewController.swift in Sources */,
 				7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */,
 				7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */,
-				7A1E50242666A4C40078008C /* SideMenuModel.swift in Sources */,
 				7A1E502C2666A5470078008C /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
