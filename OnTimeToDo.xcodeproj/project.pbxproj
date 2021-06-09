@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772F16B3A3AAE2A5F8464CA6 /* Pods_OnTimeToDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE15005D032E3BE86CB70AB /* Pods_OnTimeToDoTests.framework */; };
 		7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEB26669D610078008C /* AppDelegate.swift */; };
 		7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FED26669D610078008C /* SceneDelegate.swift */; };
 		7A1E4FF026669D610078008C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEF26669D610078008C /* ViewController.swift */; };
@@ -17,6 +18,13 @@
 		7A1E500E26669D630078008C /* OnTimeToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */; };
 		7A1E501F2666A2A20078008C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E501E2666A2A20078008C /* SideMenuViewController.swift */; };
 		7A1E502C2666A5470078008C /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E502B2666A5470078008C /* SideMenuCell.swift */; };
+		7A7CB9E5266FF14C00359C3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */; };
+		7A7CB9EA266FF34900359C3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9E9266FF34900359C3D /* LoginViewController.swift */; };
+		7A7CB9EF266FF36000359C3D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */; };
+		7A7CB9F9266FF8DD00359C3D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9F8266FF8DD00359C3D /* Utilities.swift */; };
+		7A7CBA01267016C300359C3D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CBA00267016C300359C3D /* EditViewController.swift */; };
+		89F0E85EA80355A7A789AE4B /* Pods_OnTimeToDo_OnTimeToDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1ACAE5C11FCE8E3C65436C /* Pods_OnTimeToDo_OnTimeToDoUITests.framework */; };
+		D185ACCD52F5F8E3A150A206 /* Pods_OnTimeToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134EC17605BE92B5EC92AEC7 /* Pods_OnTimeToDo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AE15005D032E3BE86CB70AB /* Pods_OnTimeToDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTimeToDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		134EC17605BE92B5EC92AEC7 /* Pods_OnTimeToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTimeToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		173361A6CF8B6F9D88884167 /* Pods-OnTimeToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDo.release.xcconfig"; path = "Target Support Files/Pods-OnTimeToDo/Pods-OnTimeToDo.release.xcconfig"; sourceTree = "<group>"; };
+		1AB0A6B98C6ED5F18EBCB4CD /* Pods-OnTimeToDo-OnTimeToDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDo-OnTimeToDoUITests.release.xcconfig"; path = "Target Support Files/Pods-OnTimeToDo-OnTimeToDoUITests/Pods-OnTimeToDo-OnTimeToDoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E40FBB5F1283E2FB47C59F8 /* Pods-OnTimeToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDo.debug.xcconfig"; path = "Target Support Files/Pods-OnTimeToDo/Pods-OnTimeToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		5503E3C16AD0E8462C6FF6A1 /* Pods-OnTimeToDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDoTests.release.xcconfig"; path = "Target Support Files/Pods-OnTimeToDoTests/Pods-OnTimeToDoTests.release.xcconfig"; sourceTree = "<group>"; };
+		67E3B5C79B1C8A0CBEE6B203 /* Pods-OnTimeToDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDoTests.debug.xcconfig"; path = "Target Support Files/Pods-OnTimeToDoTests/Pods-OnTimeToDoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A1E4FE826669D610078008C /* OnTimeToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTimeToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1E4FEB26669D610078008C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A1E4FED26669D610078008C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +68,13 @@
 		7A1E500F26669D630078008C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1E501E2666A2A20078008C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		7A1E502B2666A5470078008C /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A7CB9E9266FF34900359C3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7A7CB9F8266FF8DD00359C3D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7A7CBA00267016C300359C3D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E62C99D863708550F64D49F1 /* Pods-OnTimeToDo-OnTimeToDoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDo-OnTimeToDoUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnTimeToDo-OnTimeToDoUITests/Pods-OnTimeToDo-OnTimeToDoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1ACAE5C11FCE8E3C65436C /* Pods_OnTimeToDo_OnTimeToDoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTimeToDo_OnTimeToDoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D185ACCD52F5F8E3A150A206 /* Pods_OnTimeToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772F16B3A3AAE2A5F8464CA6 /* Pods_OnTimeToDoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F0E85EA80355A7A789AE4B /* Pods_OnTimeToDo_OnTimeToDoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C304B8BACF89F06F01CD9FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				134EC17605BE92B5EC92AEC7 /* Pods_OnTimeToDo.framework */,
+				EA1ACAE5C11FCE8E3C65436C /* Pods_OnTimeToDo_OnTimeToDoUITests.framework */,
+				0AE15005D032E3BE86CB70AB /* Pods_OnTimeToDoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		727E70E6F9A347EC95839708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E40FBB5F1283E2FB47C59F8 /* Pods-OnTimeToDo.debug.xcconfig */,
+				173361A6CF8B6F9D88884167 /* Pods-OnTimeToDo.release.xcconfig */,
+				E62C99D863708550F64D49F1 /* Pods-OnTimeToDo-OnTimeToDoUITests.debug.xcconfig */,
+				1AB0A6B98C6ED5F18EBCB4CD /* Pods-OnTimeToDo-OnTimeToDoUITests.release.xcconfig */,
+				67E3B5C79B1C8A0CBEE6B203 /* Pods-OnTimeToDoTests.debug.xcconfig */,
+				5503E3C16AD0E8462C6FF6A1 /* Pods-OnTimeToDoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7A1E4FDF26669D610078008C = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +135,8 @@
 				7A1E500126669D630078008C /* OnTimeToDoTests */,
 				7A1E500C26669D630078008C /* OnTimeToDoUITests */,
 				7A1E4FE926669D610078008C /* Products */,
+				727E70E6F9A347EC95839708 /* Pods */,
+				2C304B8BACF89F06F01CD9FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +153,14 @@
 		7A1E4FEA26669D610078008C /* OnTimeToDo */ = {
 			isa = PBXGroup;
 			children = (
+				7A7CB9F7266FF8C400359C3D /* HelperMethods */,
+				7A7CB9F3266FF36800359C3D /* ViewControllers */,
 				7A1E4FEB26669D610078008C /* AppDelegate.swift */,
 				7A1E4FED26669D610078008C /* SceneDelegate.swift */,
-				7A1E4FEF26669D610078008C /* ViewController.swift */,
 				7A1E4FF126669D610078008C /* Main.storyboard */,
 				7A1E4FF426669D620078008C /* Assets.xcassets */,
 				7A1E4FF626669D620078008C /* LaunchScreen.storyboard */,
+				7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */,
 				7A1E4FF926669D620078008C /* Info.plist */,
 				7A1E501E2666A2A20078008C /* SideMenuViewController.swift */,
 				7A1E502B2666A5470078008C /* SideMenuCell.swift */,
@@ -134,6 +186,25 @@
 			path = OnTimeToDoUITests;
 			sourceTree = "<group>";
 		};
+		7A7CB9F3266FF36800359C3D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */,
+				7A7CB9E9266FF34900359C3D /* LoginViewController.swift */,
+				7A1E4FEF26669D610078008C /* ViewController.swift */,
+				7A7CBA00267016C300359C3D /* EditViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A7CB9F7266FF8C400359C3D /* HelperMethods */ = {
+			isa = PBXGroup;
+			children = (
+				7A7CB9F8266FF8DD00359C3D /* Utilities.swift */,
+			);
+			path = HelperMethods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1E501226669D630078008C /* Build configuration list for PBXNativeTarget "OnTimeToDo" */;
 			buildPhases = (
+				ABE3B6A029A5ED14C5FA5058 /* [CP] Check Pods Manifest.lock */,
 				7A1E4FE426669D610078008C /* Sources */,
 				7A1E4FE526669D610078008C /* Frameworks */,
 				7A1E4FE626669D610078008C /* Resources */,
+				C13D0B0258D5164E348B4C10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1E501526669D630078008C /* Build configuration list for PBXNativeTarget "OnTimeToDoTests" */;
 			buildPhases = (
+				7D749D8A91DC1119EE0EDF28 /* [CP] Check Pods Manifest.lock */,
 				7A1E4FFA26669D630078008C /* Sources */,
 				7A1E4FFB26669D630078008C /* Frameworks */,
 				7A1E4FFC26669D630078008C /* Resources */,
@@ -176,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1E501826669D630078008C /* Build configuration list for PBXNativeTarget "OnTimeToDoUITests" */;
 			buildPhases = (
+				54082C2B7F7BC63AA4F8E520 /* [CP] Check Pods Manifest.lock */,
 				7A1E500526669D630078008C /* Sources */,
 				7A1E500626669D630078008C /* Frameworks */,
 				7A1E500726669D630078008C /* Resources */,
+				A221BDF8F54B6A0884F5CFD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1E4FF826669D620078008C /* LaunchScreen.storyboard in Resources */,
+				7A7CB9E5266FF14C00359C3D /* GoogleService-Info.plist in Resources */,
 				7A1E4FF526669D620078008C /* Assets.xcassets in Resources */,
 				7A1E4FF326669D610078008C /* Main.storyboard in Resources */,
 			);
@@ -259,16 +336,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54082C2B7F7BC63AA4F8E520 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnTimeToDo-OnTimeToDoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D749D8A91DC1119EE0EDF28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnTimeToDoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A221BDF8F54B6A0884F5CFD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnTimeToDo-OnTimeToDoUITests/Pods-OnTimeToDo-OnTimeToDoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnTimeToDo-OnTimeToDoUITests/Pods-OnTimeToDo-OnTimeToDoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnTimeToDo-OnTimeToDoUITests/Pods-OnTimeToDo-OnTimeToDoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE3B6A029A5ED14C5FA5058 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnTimeToDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C13D0B0258D5164E348B4C10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnTimeToDo/Pods-OnTimeToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnTimeToDo/Pods-OnTimeToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnTimeToDo/Pods-OnTimeToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A1E4FE426669D610078008C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7CB9EA266FF34900359C3D /* LoginViewController.swift in Sources */,
+				7A7CB9EF266FF36000359C3D /* SignUpViewController.swift in Sources */,
 				7A1E501F2666A2A20078008C /* SideMenuViewController.swift in Sources */,
 				7A1E4FF026669D610078008C /* ViewController.swift in Sources */,
 				7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */,
 				7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */,
+				7A7CB9F9266FF8DD00359C3D /* Utilities.swift in Sources */,
 				7A1E502C2666A5470078008C /* SideMenuCell.swift in Sources */,
+				7A7CBA01267016C300359C3D /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +625,7 @@
 		};
 		7A1E501326669D630078008C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E40FBB5F1283E2FB47C59F8 /* Pods-OnTimeToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +645,7 @@
 		};
 		7A1E501426669D630078008C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173361A6CF8B6F9D88884167 /* Pods-OnTimeToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +665,7 @@
 		};
 		7A1E501626669D630078008C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E3B5C79B1C8A0CBEE6B203 /* Pods-OnTimeToDoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +688,7 @@
 		};
 		7A1E501726669D630078008C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5503E3C16AD0E8462C6FF6A1 /* Pods-OnTimeToDoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +711,7 @@
 		};
 		7A1E501926669D630078008C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62C99D863708550F64D49F1 /* Pods-OnTimeToDo-OnTimeToDoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +732,7 @@
 		};
 		7A1E501A26669D630078008C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB0A6B98C6ED5F18EBCB4CD /* Pods-OnTimeToDo-OnTimeToDoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
