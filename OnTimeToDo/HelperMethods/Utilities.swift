@@ -52,13 +52,13 @@ class Utilities {
 //
 //    }
     
-//    static func styleFilledButton(_ button:UIButton) {
-//
-//        // Filled rounded corner style
-//        button.backgroundColor = UIColor.init(red: 255/255, green: 194/255, blue: 0/255, alpha: 1)
-//        button.layer.cornerRadius = 25.0
-//        button.tintColor = UIColor.init(red: 101/255, green: 67/255, blue: 33/255, alpha: 1)
-//    }
+    static func styleFilledButton(_ button:UIButton) {
+
+        // Filled rounded corner style
+        button.backgroundColor = UIColor.init(red: 255/255, green: 194/255, blue: 0/255, alpha: 1)
+        button.layer.cornerRadius = 25.0
+        button.tintColor = UIColor.init(red: 101/255, green: 67/255, blue: 33/255, alpha: 1)
+    }
 //
 //    static func styleHollowButton(_ button:UIButton) {
 //        

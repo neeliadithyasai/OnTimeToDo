@@ -18,7 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var profilepic: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var btnAddTask: UIButton!
+    @IBOutlet weak var btnDeleteTask: UIButton!
+    
     var isSideViewOpen : Bool = false
+    let db = Firestore.firestore()
+    var groupnames = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,14 +39,19 @@ class ViewController: UIViewController {
         button.image = imageView
         navigationItem.leftBarButtonItem = button
         navigationItem.leftBarButtonItem?.imageInsets = UIEdgeInsets(top: 0, left: -30, bottom: 0, right: 0)
-        
+        Utilities.styleFilledButton(btnAddTask)
+        Utilities.styleFilledButton(btnDeleteTask)
+        //btnAddTask.frame.size = CGSize(width: 220, height: 35)
         greetUser()
+        populatesidetable()
+       
         
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         greetUser()
+        populatesidetable()
     }
     
     @IBAction func btnSettings(_ sender: Any) {
@@ -52,7 +62,7 @@ class ViewController: UIViewController {
     func greetUser(){
         
         
-        let db = Firestore.firestore()
+      
         db.collection("users").getDocuments { (querySnapshot, error) in
             if error != nil{
                 return
@@ -61,7 +71,6 @@ class ViewController: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents{
                     for doc in snapshotDocuments{
                         let data = doc.data()
-                        print(data)
                         if let currentUser = Auth.auth().currentUser?.uid{
                             if let u = data["uuid"] as? String{
                                 if u == currentUser{
@@ -155,15 +164,46 @@ class ViewController: UIViewController {
        
     }
     
+    func populatesidetable(){
+        
+        if let currentUser = Auth.auth().currentUser?.uid{
+            
+            db.collection("users").document(currentUser).collection("groups").getDocuments { (data, error) in
+                if error != nil{
+                    return
+                }else{
+                    if let groupnames = data?.documents{
+                            
+                        self.groupnames.removeAll()
+                        for groupname in groupnames{
+                            
+                       
+                            self.groupnames.append(groupname.documentID)
+                        }
+                        print(self.groupnames.count)
+                    }
+                    
+                    
+                }
+            }
+          
+        }
+       
+    
+        self.sidetableview.reloadData()
+    }
+    
     
 }
+
+
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == sidetableview{
             
-           return  4
+            return  groupnames.count
         }else{
        return 10
         }
@@ -172,11 +212,12 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == sidetableview{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "sidetablecell") as? UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sidetablecell") as? sidetablecell
             cell?.layer.cornerRadius = 12
             cell?.layer.masksToBounds = true
             cell?.layer.borderWidth = 1
             cell?.alpha = 0.5
+            cell?.lblname.text = self.groupnames[indexPath.row]
             
             return cell!
         }else{
@@ -191,6 +232,24 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
         }
         
        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if tableView == sidetableview{
+            
+            if let grouptasksvc = self.storyboard?.instantiateViewController(identifier: "grouptasksVC") as? GroupTasksViewController{
+                
+                grouptasksvc.groupname = self.groupnames[indexPath.row]
+                self.navigationController?.pushViewController(grouptasksvc, animated: true)
+                
+            }
+            
+            
+        }else{
+            
+            
+        }
     }
     
     

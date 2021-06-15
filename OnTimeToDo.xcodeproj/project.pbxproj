@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		772F16B3A3AAE2A5F8464CA6 /* Pods_OnTimeToDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE15005D032E3BE86CB70AB /* Pods_OnTimeToDoTests.framework */; };
+		7A16C1ED2677483700A11D38 /* AddTaskGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C1EC2677483700A11D38 /* AddTaskGroupViewController.swift */; };
+		7A16C1F32677643500A11D38 /* sidetablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C1F22677643500A11D38 /* sidetablecell.swift */; };
+		7A16C201267768BA00A11D38 /* GroupTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C200267768BA00A11D38 /* GroupTasksViewController.swift */; };
+		7A16C2062677805A00A11D38 /* tasktablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C2052677805A00A11D38 /* tasktablecell.swift */; };
+		7A16C20B267786E300A11D38 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C20A267786E300A11D38 /* EditTaskViewController.swift */; };
 		7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEB26669D610078008C /* AppDelegate.swift */; };
 		7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FED26669D610078008C /* SceneDelegate.swift */; };
 		7A1E4FF026669D610078008C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEF26669D610078008C /* ViewController.swift */; };
@@ -16,8 +21,6 @@
 		7A1E4FF826669D620078008C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1E4FF626669D620078008C /* LaunchScreen.storyboard */; };
 		7A1E500326669D630078008C /* OnTimeToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500226669D630078008C /* OnTimeToDoTests.swift */; };
 		7A1E500E26669D630078008C /* OnTimeToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */; };
-		7A1E501F2666A2A20078008C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E501E2666A2A20078008C /* SideMenuViewController.swift */; };
-		7A1E502C2666A5470078008C /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E502B2666A5470078008C /* SideMenuCell.swift */; };
 		7A7CB9E5266FF14C00359C3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */; };
 		7A7CB9EA266FF34900359C3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9E9266FF34900359C3D /* LoginViewController.swift */; };
 		7A7CB9EF266FF36000359C3D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */; };
@@ -52,6 +55,11 @@
 		4E40FBB5F1283E2FB47C59F8 /* Pods-OnTimeToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDo.debug.xcconfig"; path = "Target Support Files/Pods-OnTimeToDo/Pods-OnTimeToDo.debug.xcconfig"; sourceTree = "<group>"; };
 		5503E3C16AD0E8462C6FF6A1 /* Pods-OnTimeToDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDoTests.release.xcconfig"; path = "Target Support Files/Pods-OnTimeToDoTests/Pods-OnTimeToDoTests.release.xcconfig"; sourceTree = "<group>"; };
 		67E3B5C79B1C8A0CBEE6B203 /* Pods-OnTimeToDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTimeToDoTests.debug.xcconfig"; path = "Target Support Files/Pods-OnTimeToDoTests/Pods-OnTimeToDoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A16C1EC2677483700A11D38 /* AddTaskGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskGroupViewController.swift; sourceTree = "<group>"; };
+		7A16C1F22677643500A11D38 /* sidetablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sidetablecell.swift; sourceTree = "<group>"; };
+		7A16C200267768BA00A11D38 /* GroupTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTasksViewController.swift; sourceTree = "<group>"; };
+		7A16C2052677805A00A11D38 /* tasktablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tasktablecell.swift; sourceTree = "<group>"; };
+		7A16C20A267786E300A11D38 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		7A1E4FE826669D610078008C /* OnTimeToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTimeToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1E4FEB26669D610078008C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A1E4FED26669D610078008C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +74,6 @@
 		7A1E500926669D630078008C /* OnTimeToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTimeToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTimeToDoUITests.swift; sourceTree = "<group>"; };
 		7A1E500F26669D630078008C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A1E501E2666A2A20078008C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		7A1E502B2666A5470078008C /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A7CB9E9266FF34900359C3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +134,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7A16C1F12677641B00A11D38 /* tablecells */ = {
+			isa = PBXGroup;
+			children = (
+				7A16C1F22677643500A11D38 /* sidetablecell.swift */,
+				7A16C2052677805A00A11D38 /* tasktablecell.swift */,
+			);
+			path = tablecells;
+			sourceTree = "<group>";
+		};
 		7A1E4FDF26669D610078008C = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +168,7 @@
 		7A1E4FEA26669D610078008C /* OnTimeToDo */ = {
 			isa = PBXGroup;
 			children = (
+				7A16C1F12677641B00A11D38 /* tablecells */,
 				7A7CB9F7266FF8C400359C3D /* HelperMethods */,
 				7A7CB9F3266FF36800359C3D /* ViewControllers */,
 				7A1E4FEB26669D610078008C /* AppDelegate.swift */,
@@ -162,8 +178,6 @@
 				7A1E4FF626669D620078008C /* LaunchScreen.storyboard */,
 				7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */,
 				7A1E4FF926669D620078008C /* Info.plist */,
-				7A1E501E2666A2A20078008C /* SideMenuViewController.swift */,
-				7A1E502B2666A5470078008C /* SideMenuCell.swift */,
 			);
 			path = OnTimeToDo;
 			sourceTree = "<group>";
@@ -193,6 +207,9 @@
 				7A7CB9E9266FF34900359C3D /* LoginViewController.swift */,
 				7A1E4FEF26669D610078008C /* ViewController.swift */,
 				7A7CBA00267016C300359C3D /* EditViewController.swift */,
+				7A16C1EC2677483700A11D38 /* AddTaskGroupViewController.swift */,
+				7A16C200267768BA00A11D38 /* GroupTasksViewController.swift */,
+				7A16C20A267786E300A11D38 /* EditTaskViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -446,12 +463,15 @@
 			files = (
 				7A7CB9EA266FF34900359C3D /* LoginViewController.swift in Sources */,
 				7A7CB9EF266FF36000359C3D /* SignUpViewController.swift in Sources */,
-				7A1E501F2666A2A20078008C /* SideMenuViewController.swift in Sources */,
+				7A16C2062677805A00A11D38 /* tasktablecell.swift in Sources */,
 				7A1E4FF026669D610078008C /* ViewController.swift in Sources */,
+				7A16C201267768BA00A11D38 /* GroupTasksViewController.swift in Sources */,
 				7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */,
 				7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */,
+				7A16C20B267786E300A11D38 /* EditTaskViewController.swift in Sources */,
 				7A7CB9F9266FF8DD00359C3D /* Utilities.swift in Sources */,
-				7A1E502C2666A5470078008C /* SideMenuCell.swift in Sources */,
+				7A16C1F32677643500A11D38 /* sidetablecell.swift in Sources */,
+				7A16C1ED2677483700A11D38 /* AddTaskGroupViewController.swift in Sources */,
 				7A7CBA01267016C300359C3D /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

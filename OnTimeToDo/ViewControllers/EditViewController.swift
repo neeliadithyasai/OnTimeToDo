@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     @IBOutlet weak var coverPic: UIImageView!
     @IBOutlet weak var profilePic: UIImageView!
@@ -26,6 +26,7 @@ class EditViewController: UIViewController {
     var email: String?
     var phn: String?
     var docid: String?
+    var clicked = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,8 +36,32 @@ class EditViewController: UIViewController {
         profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
         profilePic.clipsToBounds = true
         coverPic.frame = CGRect(x: 0, y: 0, width: 414, height: 276)
+        profilePic.isUserInteractionEnabled = true
+        profilePic.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileimage)))
     }
     
+    @objc func profileimage()
+    {   clicked = true
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+
+        guard let image = info[.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+
+        // print out the image size as a test
+        print(image.size)
+        self.profilePic.image = image
+        
+    }
     
     func greetUser(){
         
@@ -143,12 +168,35 @@ class EditViewController: UIViewController {
                 
                 db.collection("users").document(self.docid!).updateData(["phoneNumber" : self.txtPhnNo.text?.trimmingCharacters(in: .whitespacesAndNewlines) as Any])
                 if message != "no data changed!"{
-                message += " Email changed!"
+                message += " Phone Number changed!"
                 }else{
                 message = " Phone Number changed!"
                 }
             }
             
+            if clicked == true {
+                
+                print("photo updated!")
+                let  ref = Storage.storage().reference().child("profileimages").child(self.txtName.text!)
+                let uploaddata = self.profilePic.image?.jpegData(compressionQuality: 0.5)
+                let md = StorageMetadata()
+                md.contentType = "image/png"
+                ref.putData(uploaddata! , metadata: nil) { (metadata, error) in
+                    if error == nil {
+                        ref.downloadURL(completion: { (url, error) in
+                         
+                         let prourl = String(describing: url!)
+                        db.collection("users").document(self.docid!).updateData(["prourl" : prourl])
+                
+                        })
+                        }
+                        }
+                if message != "no data changed!"{
+                message += " Profile pic changed!"
+                }else{
+                message = " Profile pic changed!"
+                }
+            }
             
             let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
