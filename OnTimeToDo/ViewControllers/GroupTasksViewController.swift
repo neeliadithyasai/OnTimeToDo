@@ -25,7 +25,7 @@ class GroupTasksViewController: UIViewController {
 
         self.title = groupname
         populatetableview()
-       
+        self.hideKeyboardWhenTappedAround()
     }
     override func viewDidAppear(_ animated: Bool) {
         populatetableview()

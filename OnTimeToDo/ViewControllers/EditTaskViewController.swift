@@ -22,7 +22,7 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
 
         self.title = taskname
-     
+        self.hideKeyboardWhenTappedAround()
         txtStatus.inputView = thePicker
         thePicker.delegate = self
         thePicker.dataSource = self

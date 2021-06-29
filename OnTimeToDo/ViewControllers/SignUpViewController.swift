@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController , UIImagePickerControllerDelegate &
     var coverclicked = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         profilePic.isUserInteractionEnabled = true
         profilePic.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileimage)))
         coverPic.isUserInteractionEnabled = true

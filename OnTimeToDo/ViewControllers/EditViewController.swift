@@ -27,27 +27,84 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
     var phn: String?
     var docid: String?
     var clicked = false
+    var coverclicked = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         greetUser()
-        
+        self.hideKeyboardWhenTappedAround()
         profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
         profilePic.clipsToBounds = true
         coverPic.frame = CGRect(x: 0, y: 0, width: 414, height: 276)
         profilePic.isUserInteractionEnabled = true
         profilePic.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileimage)))
+        coverPic.isUserInteractionEnabled = true
+        coverPic.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(coverimage)))
+        
     }
     
-    @objc func profileimage()
-    {   clicked = true
-        let vc = UIImagePickerController()
-        vc.sourceType = .camera
-        vc.allowsEditing = true
-        vc.delegate = self
-        present(vc, animated: true)
+    
+    @objc func coverimage()
+    {
+        
+        let alertController = UIAlertController(title: nil, message: "please choose source", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [self] action in
+            coverclicked = true
+            clicked = true
+            let picker = UIImagePickerController()
+            picker.allowsEditing = true
+            picker.delegate = self
+            present(picker, animated: true)
+        }))
+        alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [self]action in
+            coverclicked = true
+            clicked = true
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.allowsEditing = true
+            vc.delegate = self
+            present(vc, animated: true)
+            
+        }))
+        
+        self.present(alertController, animated: true)
+        
     }
+    
+    
+    @objc func profileimage()
+    {
+        
+        let alertController = UIAlertController(title: nil, message: "please choose source", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [self] action in
+            
+            clicked = true
+            let picker = UIImagePickerController()
+            picker.allowsEditing = true
+            picker.delegate = self
+            present(picker, animated: true)
+        }))
+        alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [self]action in
+            
+            clicked = true
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.allowsEditing = true
+            vc.delegate = self
+            present(vc, animated: true)
+            
+        }))
+        
+        self.present(alertController, animated: true)
+        
+        
+        
+        
+  
+    }
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
@@ -59,7 +116,15 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
 
         // print out the image size as a test
         print(image.size)
-        self.profilePic.image = image
+        
+        if coverclicked == true {
+            
+            
+        }else{
+            
+            self.profilePic.image = image
+        }
+      
         
     }
     
@@ -187,7 +252,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
                          
                          let prourl = String(describing: url!)
                         db.collection("users").document(self.docid!).updateData(["prourl" : prourl])
-                
+                            self.clicked = false
                         })
                         }
                         }

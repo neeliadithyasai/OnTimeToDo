@@ -18,7 +18,7 @@ class AddTaskGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func btnSave(_ sender: Any) {

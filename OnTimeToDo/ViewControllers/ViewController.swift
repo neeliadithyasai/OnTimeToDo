@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         //btnAddTask.frame.size = CGSize(width: 220, height: 35)
         greetUser()
         populatesidetable()
+        self.hideKeyboardWhenTappedAround()
        
         
         

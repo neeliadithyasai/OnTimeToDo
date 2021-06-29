@@ -23,7 +23,7 @@ class LoginViewController: UIViewController
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.hideKeyboardWhenTappedAround()
         let ud = UserDefaults.standard
                let e = ud.string(forKey: "email")
                let p = ud.string(forKey: "password")
