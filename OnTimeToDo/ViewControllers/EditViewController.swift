@@ -26,8 +26,9 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
     var email: String?
     var phn: String?
     var docid: String?
-    var clicked = false
     var coverclicked = false
+    var coverchanged = false
+    var profilechanged = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +52,6 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
         let alertController = UIAlertController(title: nil, message: "please choose source", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [self] action in
             coverclicked = true
-            clicked = true
             let picker = UIImagePickerController()
             picker.allowsEditing = true
             picker.delegate = self
@@ -59,7 +59,6 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
         }))
         alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [self]action in
             coverclicked = true
-            clicked = true
             let vc = UIImagePickerController()
             vc.sourceType = .camera
             vc.allowsEditing = true
@@ -78,16 +77,14 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
         
         let alertController = UIAlertController(title: nil, message: "please choose source", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [self] action in
-            
-            clicked = true
+         
             let picker = UIImagePickerController()
             picker.allowsEditing = true
             picker.delegate = self
             present(picker, animated: true)
         }))
         alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [self]action in
-            
-            clicked = true
+    
             let vc = UIImagePickerController()
             vc.sourceType = .camera
             vc.allowsEditing = true
@@ -119,10 +116,15 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
         
         if coverclicked == true {
             
+            self.coverPic.image = image
+            coverclicked = false
+            coverchanged = true
             
         }else{
             
             self.profilePic.image = image
+            profilechanged = true
+            
         }
       
         
@@ -239,7 +241,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
                 }
             }
             
-            if clicked == true {
+            if profilechanged == true {
                 
                 print("photo updated!")
                 let  ref = Storage.storage().reference().child("profileimages").child(self.txtName.text!)
@@ -252,7 +254,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
                          
                          let prourl = String(describing: url!)
                         db.collection("users").document(self.docid!).updateData(["prourl" : prourl])
-                            self.clicked = false
+                            self.profilechanged = false
                         })
                         }
                         }
@@ -262,6 +264,35 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate & UI
                 message = " Profile pic changed!"
                 }
             }
+            
+            
+            if coverchanged == true {
+                
+                print("photo updated!")
+                let  ref = Storage.storage().reference().child("coverimages").child(self.txtName.text!)
+                let uploaddata = self.coverPic.image?.jpegData(compressionQuality: 0.5)
+                let md = StorageMetadata()
+                md.contentType = "image/png"
+                ref.putData(uploaddata! , metadata: nil) { (metadata, error) in
+                    if error == nil {
+                        ref.downloadURL(completion: { (url, error) in
+                         
+                         let curl = String(describing: url!)
+                        db.collection("users").document(self.docid!).updateData(["curl" : curl])
+                            self.coverchanged = false
+                        })
+                        }
+                        }
+                if message != "no data changed!"{
+                message += " cover pic changed!"
+                }else{
+                message = " cover pic changed!"
+                }
+            }
+            
+            
+            
+            
             
             let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
