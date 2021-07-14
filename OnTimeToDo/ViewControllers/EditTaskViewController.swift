@@ -18,6 +18,7 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     let myPickerData = [String](arrayLiteral: "","Pending", "Done", "In progress")
     let thePicker = UIPickerView()
+    let datePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +27,21 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         txtStatus.inputView = thePicker
         thePicker.delegate = self
         thePicker.dataSource = self
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.preferredDatePickerStyle = UIDatePickerStyle.wheels
+        txtDeadline.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
+     
+        
+    }
+    
+    @objc func dateChanged(_ sender: UIDatePicker) {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
+        if let day = components.day, let month = components.month, let year = components.year {
+            print("\(day) \(month) \(year)")
+            txtDeadline.text = "\(day)-\(month)-\(year)"
+            txtDeadline.resignFirstResponder()
+        }
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

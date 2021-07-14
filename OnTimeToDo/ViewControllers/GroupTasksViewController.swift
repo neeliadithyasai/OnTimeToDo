@@ -26,12 +26,15 @@ class GroupTasksViewController: UIViewController {
         self.title = groupname
         populatetableview()
         self.hideKeyboardWhenTappedAround()
+        tasksTableView.dataSource = self
+        tasksTableView.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
         populatetableview()
     }
 
     @IBAction func AddTaskBtn(_ sender: Any) {
+        
         
         let alertController = UIAlertController(title: nil, message: "Create Task", preferredStyle: .alert)
         alertController.addTextField()
@@ -40,22 +43,40 @@ class GroupTasksViewController: UIViewController {
             if let currentUser = Auth.auth().currentUser?.uid{
                 if let answer = alertController.textFields![0].text{
                     
-                    db.collection("users").document(currentUser).collection("groups").document(self.groupname!).collection(self.groupname!).document(answer).setData(["Description" : "" , "deadline":"", "status":""])
-                
-                let alertController = UIAlertController(title: nil, message: "task created", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "ok", style: .cancel, handler: {action in
-                    
-                        self.tasksTableView.reloadData()
-                }))
-                self.present(alertController, animated: true)
+                    db.collection("users").document(currentUser).collection("groups").document(self.groupname!).collection(self.groupname!).document(answer).setData(["Description" : "" , "deadline":"", "status":"" , "groupname":self.groupname!])
+                 
+                       
+                       
+            
                 }
             }
+            
+            let talertController = UIAlertController(title: nil, message: "task created", preferredStyle: .alert)
+                talertController.addAction(UIAlertAction(title: "ok", style: .default, handler:{action in
+                  self.populatetableview()
+                  
+                }))
+            self.present(talertController, animated: true, completion: {populatetableview()})
+          
         
         }))
         self.present(alertController, animated: true)
-        }
+       
         
-             
+        
+    
+    }
+    
+    @IBAction func deleteTaskbtn(_ sender: Any) {
+        
+        populatetableview()
+    }
+    
+    
+  
+    
+    
+    
     func populatetableview(){
         
         
@@ -73,7 +94,7 @@ class GroupTasksViewController: UIViewController {
                             
                             self.tasknames.append(taskname.documentID)
                         }
-                        print("totaltasks:\(self.tasknames[0])")
+                       // print("totaltasks:\(self.tasknames[0])")
                     }
                     
                     

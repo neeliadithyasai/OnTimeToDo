@@ -20,15 +20,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var btnAddTask: UIButton!
     @IBOutlet weak var btnDeleteTask: UIButton!
+    @IBOutlet weak var TableAllTasks: UITableView!
     
     var isSideViewOpen : Bool = false
     let db = Firestore.firestore()
     var groupnames = [String]()
+    var alltasks = [String]()
+    var taskgroups = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "All Tasks"
-        
+     
+       // Populatemaintable()
+       
         sideview.isHidden = true
         isSideViewOpen = false
         
@@ -43,9 +48,11 @@ class ViewController: UIViewController {
         Utilities.styleFilledButton(btnDeleteTask)
         //btnAddTask.frame.size = CGSize(width: 220, height: 35)
         greetUser()
+      
         populatesidetable()
+    
         self.hideKeyboardWhenTappedAround()
-       
+      
         
         
     }
@@ -53,6 +60,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         greetUser()
         populatesidetable()
+        Populatemaintable()
     }
     
     @IBAction func btnSettings(_ sender: Any) {
@@ -181,7 +189,8 @@ class ViewController: UIViewController {
                        
                             self.groupnames.append(groupname.documentID)
                         }
-                        print(self.groupnames.count)
+                        
+                        
                     }
                     
                     
@@ -195,7 +204,69 @@ class ViewController: UIViewController {
     }
     
     
+    
+    func Populatemaintable(){
+        
+        if let currentUser = Auth.auth().currentUser?.uid{
+            
+            db.collection("users").document(currentUser).collection("groups").getDocuments { (data, error) in
+                if error != nil{
+                    return
+                }else{
+                    if let groupnames = data?.documents{
+                            
+                        self.alltasks.removeAll()
+                        self.taskgroups.removeAll()
+                        for groupname in groupnames{
+                            
+                          
+                            self.db.collection("users").document(currentUser).collection("groups").document((groupname.documentID)).collection(groupname.documentID).getDocuments { (data, error) in
+                                if error != nil{
+                                    return
+                                }else{
+                                    if let tasknames = data?.documents{
+                                           
+                                        for taskname in tasknames{
+                                            
+                                            self.alltasks.append(taskname.documentID)
+                                            self.taskgroups.append(groupname.documentID)
+                                   
+                                        }
+                                        print("totaltasks:\(self.alltasks.count)")
+                              
+                                     self.TableAllTasks.reloadData()
+                                      
+                                    }
+                                    
+                                    
+                                }
+                            }
+                            
+                           
+                            
+                        }
+                       
+                     
+                    }
+                 
+                    
+                }
+            }
+          
+        }
+     
+      
+    }
+    
+    
+    
+    
+    
+    
 }
+
+
+
 
 
 
@@ -206,7 +277,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
             
             return  groupnames.count
         }else{
-       return 10
+            
+          
+            return self.alltasks.count
         }
         
     }
@@ -223,11 +296,12 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
             return cell!
         }else{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tablecell") as? UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tablecell") as? maintablecell
         cell?.layer.cornerRadius = 12
         cell?.layer.masksToBounds = true
         cell?.layer.borderWidth = 1
         cell?.alpha = 0.5
+        cell?.taskName.text = self.alltasks[indexPath.row]
             return cell!
             
         }

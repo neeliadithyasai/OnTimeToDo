@@ -18,6 +18,7 @@ class AddTaskGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Add Group"
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -64,6 +65,7 @@ class AddTaskGroupViewController: UIViewController {
         let alertController = UIAlertController(title: nil, message: "group created", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "ok", style: .cancel, handler: {action in
             self.txtname.text?.removeAll()
+    
         }))
         self.present(alertController, animated: true)
         }

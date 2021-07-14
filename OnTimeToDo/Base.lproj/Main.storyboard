@@ -20,27 +20,26 @@
                                 <rect key="frame" x="0.0" y="44" width="425" height="825"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tablecell" id="wcD-8v-8TL">
-                                        <rect key="frame" x="0.0" y="28" width="425" height="52.333332061767578"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tablecell" id="wcD-8v-8TL" customClass="maintablecell" customModule="OnTimeToDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="425" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcD-8v-8TL" id="fx6-cB-7ly">
-                                            <rect key="frame" x="0.0" y="0.0" width="425" height="52.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="425" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3b-tj-8Tw">
-                                                    <rect key="frame" x="50" y="10.999999999999998" width="54.666666666666657" height="30.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3b-tj-8Tw">
+                                                    <rect key="frame" x="50" y="6" width="259" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="T3b-tj-8Tw" firstAttribute="leading" secondItem="fx6-cB-7ly" secondAttribute="leadingMargin" constant="30" id="I6u-hf-OqI"/>
-                                                <constraint firstItem="T3b-tj-8Tw" firstAttribute="bottom" secondItem="fx6-cB-7ly" secondAttribute="bottomMargin" id="qHA-JC-ueM"/>
-                                                <constraint firstItem="T3b-tj-8Tw" firstAttribute="top" secondItem="fx6-cB-7ly" secondAttribute="topMargin" id="uHE-Tf-e0Z"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.28594267369999998" green="0.48173075910000002" blue="0.8980814815" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="taskName" destination="T3b-tj-8Tw" id="71O-4M-osu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -56,14 +55,14 @@
                                         <color key="backgroundColor" red="0.64955818649999997" green="0.32031297679999998" blue="0.39215797190000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sidetablecell" id="8cd-AW-bth" customClass="sidetablecell" customModule="OnTimeToDo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="253" height="43.333332061767578"/>
+                                                <rect key="frame" x="0.0" y="28" width="253" height="43"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8cd-AW-bth" id="cgs-9v-2Cd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43.333332061767578"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mp-c7-FLb">
-                                                            <rect key="frame" x="27.999999999999996" y="10.999999999999998" width="47.666666666666657" height="21.333333333333329"/>
+                                                            <rect key="frame" x="27.999999999999996" y="11" width="47.666666666666657" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -184,6 +183,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="egT-2K-nh6"/>
                     <connections>
+                        <outlet property="TableAllTasks" destination="PWd-EA-RDB" id="tY5-6O-H7Q"/>
                         <outlet property="btnAddTask" destination="GEI-UT-jpp" id="qfv-tV-EiS"/>
                         <outlet property="btnDeleteTask" destination="8lc-tP-oW1" id="dSP-pO-9Bq"/>
                         <outlet property="coverpic" destination="5lq-8c-dMS" id="XkP-Tm-Afx"/>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.072463768116" y="93.75"/>
+            <point key="canvasLocation" x="1854.6728971962616" y="93.30453563714903"/>
         </scene>
         <!--Add Task Group View Controller-->
         <scene sceneID="wiG-tH-vqU">
@@ -583,14 +583,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tasktablecell" id="m3X-tr-XkS" customClass="tasktablecell" customModule="OnTimeToDo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="428" height="43.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m3X-tr-XkS" id="aQD-Cl-o6h">
-                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw2-LB-TGa">
-                                                    <rect key="frame" x="47" y="10.999999999999998" width="32" height="21.333333333333329"/>
+                                                    <rect key="frame" x="47" y="11.000000000000002" width="32" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -628,6 +628,9 @@
                                 <state key="normal" title="+ Delete a Task">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteTaskbtn:" destination="VnA-ty-Rih" eventType="touchUpInside" id="PsH-Pm-3YB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ve7-vS-Nx7"/>

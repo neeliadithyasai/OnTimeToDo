@@ -13,6 +13,7 @@
 		7A16C201267768BA00A11D38 /* GroupTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C200267768BA00A11D38 /* GroupTasksViewController.swift */; };
 		7A16C2062677805A00A11D38 /* tasktablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C2052677805A00A11D38 /* tasktablecell.swift */; };
 		7A16C20B267786E300A11D38 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C20A267786E300A11D38 /* EditTaskViewController.swift */; };
+		7A186488269E098000B49BAB /* maintablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A186487269E098000B49BAB /* maintablecell.swift */; };
 		7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEB26669D610078008C /* AppDelegate.swift */; };
 		7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FED26669D610078008C /* SceneDelegate.swift */; };
 		7A1E4FF026669D610078008C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEF26669D610078008C /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		7A16C200267768BA00A11D38 /* GroupTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTasksViewController.swift; sourceTree = "<group>"; };
 		7A16C2052677805A00A11D38 /* tasktablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tasktablecell.swift; sourceTree = "<group>"; };
 		7A16C20A267786E300A11D38 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
+		7A186487269E098000B49BAB /* maintablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maintablecell.swift; sourceTree = "<group>"; };
 		7A1E4FE826669D610078008C /* OnTimeToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTimeToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1E4FEB26669D610078008C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A1E4FED26669D610078008C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				7A16C1F22677643500A11D38 /* sidetablecell.swift */,
 				7A16C2052677805A00A11D38 /* tasktablecell.swift */,
+				7A186487269E098000B49BAB /* maintablecell.swift */,
 			);
 			path = tablecells;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */,
 				7A16C20B267786E300A11D38 /* EditTaskViewController.swift in Sources */,
 				7A7CB9F9266FF8DD00359C3D /* Utilities.swift in Sources */,
+				7A186488269E098000B49BAB /* maintablecell.swift in Sources */,
 				7A16C1F32677643500A11D38 /* sidetablecell.swift in Sources */,
 				7A16C1ED2677483700A11D38 /* AddTaskGroupViewController.swift in Sources */,
 				7A7CBA01267016C300359C3D /* EditViewController.swift in Sources */,
