@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
 
     
     var taskname: String?
+    var groupname: String?
     @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var txtDeadline: UITextField!
     @IBOutlet weak var txtStatus: UITextField!
@@ -31,7 +36,7 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         datePicker.preferredDatePickerStyle = UIDatePickerStyle.wheels
         txtDeadline.inputView = datePicker
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
-     
+        loadTask()
         
     }
     
@@ -61,7 +66,74 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
    
     @IBAction func saveBtn(_ sender: Any) {
         
+        let alert = UIAlertController(title: "update data ?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "update", style: .default, handler: { (action) in
+            self.updatedata()
+         
+            self.navigationController?.popViewController(animated: true)
+           
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func updatedata(){
+    
         
+        
+        
+        let db = Firestore.firestore()
+        
+        
+        if let currentUser = Auth.auth().currentUser?.uid{
+            
+            db.collection("users").document(currentUser).collection("groups").document(self.groupname!).collection(self.groupname!).document(self.taskname!).updateData(["Description" : self.txtDescription.text , "status" : txtStatus.text , "deadline": txtDeadline.text])
+        }
+        
+        
+    
+        
+    }
+    
+    
+    func loadTask(){
+        
+        let db = Firestore.firestore()
+        
+        
+        if let currentUser = Auth.auth().currentUser?.uid{
+            
+            db.collection("users").document(currentUser).collection("groups").document(self.groupname!).collection(self.groupname!).getDocuments { (data, error) in
+                if error != nil{
+                    return
+                }else{
+                    if let tasknames = data?.documents{
+                        
+                        for task in tasknames{
+                            
+                            if task.documentID == self.taskname{
+                                
+                                let data = task.data()
+                                
+                                self.txtDescription.text = data["Description"] as? String
+                                self.txtDeadline.text = data["deadline"] as? String
+                                self.txtStatus.text = data["status"] as? String
+                                
+                                
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    
+                }
+            }
+           
+        }
+       
     }
     
 }

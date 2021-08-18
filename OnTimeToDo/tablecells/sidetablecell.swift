@@ -14,5 +14,7 @@ class sidetablecell: UITableViewCell{
         super.awakeFromNib()
         // Initialization code
     }
+    
+  
 }
     

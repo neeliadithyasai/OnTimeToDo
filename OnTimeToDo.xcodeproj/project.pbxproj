@@ -14,6 +14,8 @@
 		7A16C2062677805A00A11D38 /* tasktablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C2052677805A00A11D38 /* tasktablecell.swift */; };
 		7A16C20B267786E300A11D38 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C20A267786E300A11D38 /* EditTaskViewController.swift */; };
 		7A186488269E098000B49BAB /* maintablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A186487269E098000B49BAB /* maintablecell.swift */; };
+		7A18648D26A07D5600B49BAB /* DeleteTaskGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18648C26A07D5600B49BAB /* DeleteTaskGroupViewController.swift */; };
+		7A18649226A07F3D00B49BAB /* deletetablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18649126A07F3D00B49BAB /* deletetablecell.swift */; };
 		7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEB26669D610078008C /* AppDelegate.swift */; };
 		7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FED26669D610078008C /* SceneDelegate.swift */; };
 		7A1E4FF026669D610078008C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E4FEF26669D610078008C /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		7A1E4FF826669D620078008C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1E4FF626669D620078008C /* LaunchScreen.storyboard */; };
 		7A1E500326669D630078008C /* OnTimeToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500226669D630078008C /* OnTimeToDoTests.swift */; };
 		7A1E500E26669D630078008C /* OnTimeToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */; };
+		7A6F619626AF6F0500BC890E /* DeleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F619526AF6F0500BC890E /* DeleteTaskViewController.swift */; };
+		7A6F619B26AF777C00BC890E /* deleteTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F619A26AF777C00BC890E /* deleteTaskCell.swift */; };
 		7A7CB9E5266FF14C00359C3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */; };
 		7A7CB9EA266FF34900359C3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9E9266FF34900359C3D /* LoginViewController.swift */; };
 		7A7CB9EF266FF36000359C3D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */; };
@@ -62,6 +66,8 @@
 		7A16C2052677805A00A11D38 /* tasktablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tasktablecell.swift; sourceTree = "<group>"; };
 		7A16C20A267786E300A11D38 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		7A186487269E098000B49BAB /* maintablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maintablecell.swift; sourceTree = "<group>"; };
+		7A18648C26A07D5600B49BAB /* DeleteTaskGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskGroupViewController.swift; sourceTree = "<group>"; };
+		7A18649126A07F3D00B49BAB /* deletetablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deletetablecell.swift; sourceTree = "<group>"; };
 		7A1E4FE826669D610078008C /* OnTimeToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTimeToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1E4FEB26669D610078008C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A1E4FED26669D610078008C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,8 @@
 		7A1E500926669D630078008C /* OnTimeToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTimeToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1E500D26669D630078008C /* OnTimeToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTimeToDoUITests.swift; sourceTree = "<group>"; };
 		7A1E500F26669D630078008C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A6F619526AF6F0500BC890E /* DeleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewController.swift; sourceTree = "<group>"; };
+		7A6F619A26AF777C00BC890E /* deleteTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteTaskCell.swift; sourceTree = "<group>"; };
 		7A7CB9E4266FF14C00359C3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A7CB9E9266FF34900359C3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A7CB9EE266FF36000359C3D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +150,8 @@
 				7A16C1F22677643500A11D38 /* sidetablecell.swift */,
 				7A16C2052677805A00A11D38 /* tasktablecell.swift */,
 				7A186487269E098000B49BAB /* maintablecell.swift */,
+				7A18649126A07F3D00B49BAB /* deletetablecell.swift */,
+				7A6F619A26AF777C00BC890E /* deleteTaskCell.swift */,
 			);
 			path = tablecells;
 			sourceTree = "<group>";
@@ -213,6 +223,8 @@
 				7A16C1EC2677483700A11D38 /* AddTaskGroupViewController.swift */,
 				7A16C200267768BA00A11D38 /* GroupTasksViewController.swift */,
 				7A16C20A267786E300A11D38 /* EditTaskViewController.swift */,
+				7A18648C26A07D5600B49BAB /* DeleteTaskGroupViewController.swift */,
+				7A6F619526AF6F0500BC890E /* DeleteTaskViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -464,11 +476,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6F619B26AF777C00BC890E /* deleteTaskCell.swift in Sources */,
 				7A7CB9EA266FF34900359C3D /* LoginViewController.swift in Sources */,
 				7A7CB9EF266FF36000359C3D /* SignUpViewController.swift in Sources */,
 				7A16C2062677805A00A11D38 /* tasktablecell.swift in Sources */,
 				7A1E4FF026669D610078008C /* ViewController.swift in Sources */,
+				7A18648D26A07D5600B49BAB /* DeleteTaskGroupViewController.swift in Sources */,
 				7A16C201267768BA00A11D38 /* GroupTasksViewController.swift in Sources */,
+				7A18649226A07F3D00B49BAB /* deletetablecell.swift in Sources */,
 				7A1E4FEC26669D610078008C /* AppDelegate.swift in Sources */,
 				7A1E4FEE26669D610078008C /* SceneDelegate.swift in Sources */,
 				7A16C20B267786E300A11D38 /* EditTaskViewController.swift in Sources */,
@@ -476,6 +491,7 @@
 				7A186488269E098000B49BAB /* maintablecell.swift in Sources */,
 				7A16C1F32677643500A11D38 /* sidetablecell.swift in Sources */,
 				7A16C1ED2677483700A11D38 /* AddTaskGroupViewController.swift in Sources */,
+				7A6F619626AF6F0500BC890E /* DeleteTaskViewController.swift in Sources */,
 				7A7CBA01267016C300359C3D /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

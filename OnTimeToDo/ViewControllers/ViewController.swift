@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     var groupnames = [String]()
     var alltasks = [String]()
     var taskgroups = [String]()
+    var taskstatus = [String]()
+    var buttonClicked = true
+    let userNotificationCenter = UNUserNotificationCenter.current()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,6 +57,33 @@ class ViewController: UIViewController {
     
         self.hideKeyboardWhenTappedAround()
       
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+////            if( self.alltasks.count > 0)
+////            {
+//                let notificationContent = UNMutableNotificationContent()
+//                notificationContent.title = "Task Pending"
+//
+//                notificationContent.body = "Task deadline is near!!"
+//                notificationContent.badge = NSNumber(value: 1)
+//
+//                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3,
+//                                                                repeats: false)
+//                let request = UNNotificationRequest(identifier: "testNotification",
+//                                                    content: notificationContent,
+//                                                    trigger: trigger)
+//
+//                self.userNotificationCenter.add(request) { (error) in
+//                    if let error = error {
+//                        print("Notification Error: ", error)
+//                    }
+//                }
+//
+//
+//
+//          //  }
+//
+//        }
         
         
     }
@@ -64,10 +95,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnSettings(_ sender: Any) {
+  
         
+        presentmenu()
         let homeViewController = self.storyboard?.instantiateViewController(identifier: "editVC") as? EditViewController
      self.navigationController?.pushViewController(homeViewController!, animated: true)
     }
+    
+    
+    @IBAction func btnDelete(_ sender: Any) {
+        
+        presentmenu()
+    }
+    
+    
+    
+    
     func greetUser(){
         
         
@@ -97,8 +140,9 @@ class ViewController: UIViewController {
                                                    
                                                    DispatchQueue.main.async(execute: {
 
+                                                        
                                                     self.profilepic.image = UIImage(data: data!)
-//                                                        cell.imgitem.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+//                                                    self.profilepic.frame = CGRect(x: 0, y: 0, width: 240, height: 230)
                                                        })
                                                }.resume()
                                             let coverimageurl = data["curl"] as? String
@@ -186,8 +230,8 @@ class ViewController: UIViewController {
                         self.groupnames.removeAll()
                         for groupname in groupnames{
                             
-                       
                             self.groupnames.append(groupname.documentID)
+                            
                         }
                         
                         
@@ -217,6 +261,7 @@ class ViewController: UIViewController {
                             
                         self.alltasks.removeAll()
                         self.taskgroups.removeAll()
+                        self.taskstatus.removeAll()
                         for groupname in groupnames{
                             
                           
@@ -227,8 +272,9 @@ class ViewController: UIViewController {
                                     if let tasknames = data?.documents{
                                            
                                         for taskname in tasknames{
-                                            
-                                            self.alltasks.append(taskname.documentID)
+                                          
+                                            self.taskstatus.append(taskname.data()["status"] as! String)
+                                           self.alltasks.append(taskname.documentID)
                                             self.taskgroups.append(groupname.documentID)
                                    
                                         }
@@ -302,6 +348,17 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
         cell?.layer.borderWidth = 1
         cell?.alpha = 0.5
         cell?.taskName.text = self.alltasks[indexPath.row]
+            if self.taskstatus[indexPath.row] == "Pending"{
+                
+                cell?.backgroundColor = #colorLiteral(red: 1, green: 0.1332711279, blue: 0.1742172837, alpha: 1)
+            }else if self.taskstatus[indexPath.row] == "In progress"{
+                
+                cell?.backgroundColor = #colorLiteral(red: 0.9990808368, green: 1, blue: 0.4584205747, alpha: 1)
+            }else if self.taskstatus[indexPath.row] == "Done"{
+            
+                cell?.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+                
+            }
             return cell!
             
         }
@@ -313,6 +370,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
         
         if tableView == sidetableview{
             
+            presentmenu()
             if let grouptasksvc = self.storyboard?.instantiateViewController(identifier: "grouptasksVC") as? GroupTasksViewController{
                 
                 grouptasksvc.groupname = self.groupnames[indexPath.row]
@@ -322,10 +380,20 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
             
             
         }else{
+            if let edittasksvc = self.storyboard?.instantiateViewController(identifier: "edittasksVC") as? EditTaskViewController{
+                
+                edittasksvc.taskname = self.alltasks[indexPath.row]
+                edittasksvc.groupname = self.taskgroups[indexPath.row]
+                self.navigationController?.pushViewController(edittasksvc, animated: true)
+                
+            }
+            
             
             
         }
     }
+    
+    
     
     
 }
